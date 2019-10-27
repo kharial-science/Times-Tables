@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css'
+
+import Canvas from './Canvas'
+
+class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      table: 0
+    }
+    this.increaseTable = this.increaseTable.bind(this)
+  }
+
+  increaseTable(increaseSpeed) {
+    setTimeout(() => {
+      this.setState({table: this.state.table + increaseSpeed})
+      this.increaseTable(increaseSpeed)
+    }, 10)
+  }
+
+  componentDidMount() {
+    this.increaseTable(0.01)
+  }
+
+  render() {
+    return (
+      <div id="App">
+        <header>
+          <h1>Times Tables</h1>
+          <p>Here is the kfs Times Tables diagram visualization</p>
+        </header>
+        <Canvas table={this.state.table} amplitude={1000} />
+      </div>
+    )
+  }
 }
 
-export default App;
+export default App
