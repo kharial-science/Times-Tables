@@ -1,0 +1,7 @@
+{
+    "files.exclude": {
+        "**/*.css": true,
+        "**/*.css.map": true,
+        "**/node_modules": true,
+    },
+}
