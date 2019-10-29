@@ -1,0 +1,35 @@
+#Settings {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #2E2E2E;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#Settings header {
+  margin: auto;
+  width: 80vh;
+  grid-column: middle-start / middle-end;
+  padding-top: 30px;
+}
+
+#Settings header h2 {
+  font-size: 32px;
+}
+
+#Settings .settings-pannel {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr [middle-start] 80vh [middle-end] 1fr;
+      grid-template-columns: 1fr [middle-start] 80vh [middle-end] 1fr;
+}
+/*# sourceMappingURL=Settings.css.map */

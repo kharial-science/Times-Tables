@@ -1,0 +1,26 @@
+#Main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr [right-start] 2fr [right-end] 1fr [middle-start] 80vh [middle-end] 1fr [left-start] 2fr [left-end] 1fr;
+      grid-template-columns: 1fr [right-start] 2fr [right-end] 1fr [middle-start] 80vh [middle-end] 1fr [left-start] 2fr [left-end] 1fr;
+  -ms-grid-rows: 17vh [canvas-start] 80vh [canvas-end] 3vh;
+      grid-template-rows: 17vh [canvas-start] 80vh [canvas-end] 3vh;
+}
+
+#Main header {
+  grid-column: middle-start / middle-end;
+}
+
+#Main header h1 {
+  font-size: 32px;
+}
+
+#Main #Canvas {
+  margin: 0 0 0 0;
+  max-width: 80vh;
+  grid-column: middle-start / middle-end;
+  grid-row: canvas-start / canvas-end;
+  -webkit-box-shadow: 0 4px 12px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 12px 0px rgba(0, 0, 0, 0.25);
+}
+/*# sourceMappingURL=Main.css.map */

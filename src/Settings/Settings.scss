@@ -1,0 +1,31 @@
+#Settings {
+
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #2E2E2E;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    header {
+        margin: auto;
+        width: 80vh;
+        grid-column: middle-start / middle-end;
+        padding-top: 30px;
+
+        h2 {
+            font-size: 32px;
+        }
+    }
+
+    .settings-pannel {
+        height: 100%;
+
+        display: grid;
+        grid-template-columns: 1fr [middle-start] 80vh [middle-end] 1fr;
+    }
+    
+}
