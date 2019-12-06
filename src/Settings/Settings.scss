@@ -6,6 +6,7 @@
     height: 100vh;
     background-color: #2E2E2E;
     color: white;
+    overflow: hidden;
 
     display: flex;
     flex-direction: column;
@@ -26,6 +27,81 @@
 
         display: grid;
         grid-template-columns: 1fr [middle-start] 80vh [middle-end] 1fr;
+        grid-auto-rows: auto;
+
+        .middle-column {
+
+            width: 100%;
+            grid-column: middle-start / middle-end;
+            
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: calc(100px + 2.5%);
+
+            .input-container {
+            
+                padding: 2.5%;
+                width: 95%;
+                max-height: 100px;
+                
+                display: flex;
+                flex-direction: column;
+    
+                &#table-input-container {
+                    background-color: lightblue;
+                }
+
+                &#numberoflines-input-container {
+                    background-color: lightcoral;
+                }
+
+                label {
+                    font-weight: 700;
+                    font-size: 25px;
+                }
+    
+                input {
+                    padding: 0 2.5%;
+                    height: 100%;
+                    width: 95%;
+                    border: none;
+                    font-family: inherit;
+                    font-weight: 600;
+                    font-size: 20px;
+                }
+    
+            }
+
+            a {
+                height: 100%;
+                margin: 10vh 0 0 0;
+                grid-column: span 2;
+            }
+
+            .render-button {
+
+                width: 100%;
+                padding: 0;
+                height: 100%;
+                border: none;
+                font-family: inherit;
+                font-size: 25px;
+                cursor: pointer;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-weight: 700;
+                color: #fff;
+                transition: all 0.2s;
+                background-color: lightpink;
+
+                &:hover {
+                    filter: brightness(110%);
+                }
+
+            }
+
+        }
+        
     }
     
 }

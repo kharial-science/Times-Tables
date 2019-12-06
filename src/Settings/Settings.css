@@ -5,6 +5,7 @@
   height: 100vh;
   background-color: #2E2E2E;
   color: white;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,5 +32,80 @@
   display: grid;
   -ms-grid-columns: 1fr [middle-start] 80vh [middle-end] 1fr;
       grid-template-columns: 1fr [middle-start] 80vh [middle-end] 1fr;
+  grid-auto-rows: auto;
+}
+
+#Settings .settings-pannel .middle-column {
+  width: 100%;
+  grid-column: middle-start / middle-end;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-auto-rows: calc(100px + 2.5%);
+}
+
+#Settings .settings-pannel .middle-column .input-container {
+  padding: 2.5%;
+  width: 95%;
+  max-height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#Settings .settings-pannel .middle-column .input-container#table-input-container {
+  background-color: lightblue;
+}
+
+#Settings .settings-pannel .middle-column .input-container#numberoflines-input-container {
+  background-color: lightcoral;
+}
+
+#Settings .settings-pannel .middle-column .input-container label {
+  font-weight: 700;
+  font-size: 25px;
+}
+
+#Settings .settings-pannel .middle-column .input-container input {
+  padding: 0 2.5%;
+  height: 100%;
+  width: 95%;
+  border: none;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+#Settings .settings-pannel .middle-column a {
+  height: 100%;
+  margin: 10vh 0 0 0;
+  grid-column: span 2;
+}
+
+#Settings .settings-pannel .middle-column .render-button {
+  width: 100%;
+  padding: 0;
+  height: 100%;
+  border: none;
+  font-family: inherit;
+  font-size: 25px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #fff;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background-color: lightpink;
+}
+
+#Settings .settings-pannel .middle-column .render-button:hover {
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
 }
 /*# sourceMappingURL=Settings.css.map */
