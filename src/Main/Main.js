@@ -14,7 +14,7 @@ class Main extends Component {
             <div id="Main">
                 <header>
                     <h1>Times Tables</h1>
-                    <p>Here is the kfs Times Tables diagram visualization</p>
+                    <p>Kharoh Family Science dynamic Times Tables diagram visualization</p>
                 </header>
                 <Canvas table={this.props.table} numberOfLines={this.props.numberOfLines} />
             </div>
