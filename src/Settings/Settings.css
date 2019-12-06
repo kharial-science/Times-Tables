@@ -66,6 +66,10 @@
   background-color: lightcoral;
 }
 
+#Settings .settings-pannel .middle-column .input-container#increasespeed-input-container {
+  background-color: lightgreen;
+}
+
 #Settings .settings-pannel .middle-column .input-container label {
   font-weight: 700;
   font-size: 25px;
